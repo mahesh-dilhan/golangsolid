@@ -1,11 +1,14 @@
 package spr
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type circle struct {
 	radius float64
 }
 
 func (c circle) area() {
-	fmt.Println()
+	fmt.Printf("Area of: %f\n ", math.Pi*c.radius*c.radius)
 }
