@@ -9,13 +9,13 @@ type circle struct {
 	radius float64
 }
 
-func (c circle) area() {
+func (c circle) Area() {
 	fmt.Printf("Area of: %f\n ", math.Pi*c.radius*c.radius)
 }
 
 func main() {
 	c := circle{
-		radius: 2.0,
+		radius: 3.0,
 	}
-	c.area()
+	c.Area()
 }
