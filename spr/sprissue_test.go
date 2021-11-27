@@ -11,7 +11,9 @@ var areatests = []areatest{
 	areatest{3, 28.274334},
 }
 func TestArea(t *testing.T){
+	c:= NewCircle()
 	for _,test := range areatests {
-		if output := Area()
+		c.radius=test.arg1
+		if output := c.Area()
 	}
 }
