@@ -10,8 +10,8 @@ type areatest struct {
 }
 
 var areatests = []areatest{
-	areatest{2, 12.566371},
-	areatest{3, 28.274334},
+	areatest{2, 12.566370614359172},
+	areatest{3, 28.274333882308138},
 }
 
 func TestArea(t *testing.T) {
@@ -19,8 +19,7 @@ func TestArea(t *testing.T) {
 	for _, test := range areatests {
 		c.radius = test.arg1
 		tolerance := 0.001
-		output := c.Area()
-		if math.Abs(output-test.expected) < tolerance {
+		if output := c.Area(); math.Abs(output-test.expected) > tolerance {
 			t.Errorf("Output %f not equal to expected %f", output, test.expected)
 		}
 	}
