@@ -7,13 +7,16 @@ type areatest struct {
 }
 
 var areatests = []areatest{
-	areatest{2,12.566371},
+	areatest{2, 12.566371},
 	areatest{3, 28.274334},
 }
-func TestArea(t *testing.T){
-	c:= NewCircle()
-	for _,test := range areatests {
-		c.radius=test.arg1
-		if output := c.Area()
+
+func TestArea(t *testing.T) {
+	c := NewCircle()
+	for _, test := range areatests {
+		c.radius = test.arg1
+		if output := c.Area(); output != test.expected {
+
+		}
 	}
 }
