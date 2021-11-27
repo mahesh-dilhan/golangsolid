@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"math"
+	"testing"
+)
 
 type areatest struct {
 	arg1, expected float64
@@ -15,8 +18,10 @@ func TestArea(t *testing.T) {
 	c := NewCircle()
 	for _, test := range areatests {
 		c.radius = test.arg1
-		if output := c.Area(); output != test.expected {
-
+		tolerance := 0.001
+		output := c.Area()
+		if math.Abs(output-test.expected) < tolerance {
+			t.Errorf("Output %f not equal to expected %f", output, test.expected)
 		}
 	}
 }
