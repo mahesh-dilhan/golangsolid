@@ -40,6 +40,15 @@ func (o output) Text(sh shape) string {
 	return fmt.Sprintf("area of shape %s is %f", sh.name(), sh.area())
 }
 
+func NewSquare() square {
+	s := &square{length: 2}
+	return *s
+}
+func NewRectangle() rectangle {
+	r := &rectangle{width: 2, height: 3}
+	return *r
+}
+
 func (o output) JSON(sh shape) string {
 	res := struct {
 		Name string  `json:"shape"`
@@ -54,4 +63,16 @@ func (o output) JSON(sh shape) string {
 		log.Fatal(err)
 	}
 	return string(bs)
+}
+
+func main() {
+	r := NewRectangle()
+	s := NewSquare()
+
+	o := output{}
+	fmt.Println(o.Text(r))
+	fmt.Println(o.JSON(r))
+
+	fmt.Println(o.Text(s))
+	fmt.Println(o.JSON(s))
 }
