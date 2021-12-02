@@ -1,10 +1,13 @@
 package ocp
 
+import "fmt"
+
 type Phone interface {
 	call()
 }
 type basicphone struct {
-	name string
+	name  string
+	model string
 }
 type iPhone struct {
 	Phone
@@ -12,7 +15,11 @@ type iPhone struct {
 }
 
 func (p *iPhone) call() {
-
+	fmt.Println("i'm ", p.name)
+	fmt.Println("calling....")
+	if p.model == "tesla" {
+		fmt.Println("sattelite calling....")
+	}
 }
 
 func main() {
