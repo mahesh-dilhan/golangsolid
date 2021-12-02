@@ -11,6 +11,10 @@ type iPhone struct {
 	basicphone
 }
 
+func (p *iPhone) call() {
+
+}
+
 func main() {
 
 }
