@@ -3,13 +3,12 @@ package ocp
 type Phone interface {
 	call()
 }
-type iPhone struct {
-	Phone
+type basicphone struct {
 	name string
 }
-type tsla struct {
+type iPhone struct {
 	Phone
-	name string
+	basicphone
 }
 
 func main() {
