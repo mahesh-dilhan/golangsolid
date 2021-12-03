@@ -1,4 +1,4 @@
-package ocp
+package main
 
 import "fmt"
 
@@ -23,5 +23,8 @@ func (p *iPhone) call() {
 }
 
 func main() {
-
+	p := iPhone{}
+	p.model = "iPhone"
+	p.name = "iPhone 13"
+	p.call()
 }
