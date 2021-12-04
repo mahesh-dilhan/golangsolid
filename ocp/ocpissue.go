@@ -9,21 +9,17 @@ type basicphone struct {
 	name  string
 	model string
 }
-type iPhone struct {
-	Phone
-	basicphone
-}
 
-func (p *iPhone) call() {
-	fmt.Println("i'm ", p.name)
+func (iphone *basicphone) call() {
+	fmt.Println("i'm ", iphone.name)
 	fmt.Println("calling....")
-	if p.model == "tesla" {
+	if iphone.model == "tesla" {
 		fmt.Println("sattelite calling....")
 	}
 }
 
 func main() {
-	p := iPhone{}
+	p := basicphone{}
 	p.model = "iPhone"
 	p.name = "iPhone 13"
 	p.call()
