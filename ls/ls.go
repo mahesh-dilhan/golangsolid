@@ -4,11 +4,12 @@ type Phone interface {
 	call()
 }
 
-//type DroneX struct {
-//	Drone
-//	name string
-//	model string
-//}
+type IPhone struct {
+	Phone
+	name  string
+	model string
+}
+
 //
 //func (dr *DroneX) prepare() {
 //	dr.checkBattery()
