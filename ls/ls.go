@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Phone interface {
 	call()
 }
@@ -11,10 +13,19 @@ type IPhone struct {
 }
 
 //
-//func (dr *DroneX) prepare() {
-//	dr.checkBattery()
-//	dr.checkPropeller()
-//}
+func (ph *IPhone) boot() {
+	ph.doOST()
+	ph.checkIO()
+}
+
+func (ph *IPhone) doPOST() {
+	fmt.Println("[boot..] do power on self test")
+}
+
+func (ph *IPhone) checkIO() {
+	fmt.Println("[boot] check Input and output")
+}
+
 //
 //func (dr *DroneX) fly() {
 //	fmt.Printf(">>> flying drone[%s] ... \n", dr.name)
