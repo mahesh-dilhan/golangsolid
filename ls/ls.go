@@ -14,7 +14,7 @@ type IPhone struct {
 
 //
 func (ph *IPhone) boot() {
-	ph.doOST()
+	ph.doPOST()
 	ph.checkIO()
 }
 
