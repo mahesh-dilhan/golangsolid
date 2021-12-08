@@ -27,12 +27,13 @@ func (ph *IPhone) checkIO() {
 }
 
 //
-//func (dr *DroneX) fly() {
-//	fmt.Printf(">>> flying drone[%s] ... \n", dr.name)
-//	dr.prepare()
-//	dr.takeOff()
-//	dr.healthCheck()
-//}
+func (ph *IPhone) call() {
+	fmt.Printf(">>> call using phone[%s] ... \n", ph.name)
+	ph.boot()
+	//ph.takeOff()
+	//ph.healthCheck()
+}
+
 //
 //func (dr *DroneX) checkBattery() {
 //	fmt.Println("[preparing] checking battery's status ... ")
