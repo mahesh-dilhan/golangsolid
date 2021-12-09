@@ -30,8 +30,12 @@ func (ph *IPhone) checkIO() {
 func (ph *IPhone) call() {
 	fmt.Printf(">>> call using phone[%s] ... \n", ph.name)
 	ph.boot()
-	//ph.takeOff()
+	ph.launchKeypad()
 	//ph.healthCheck()
+}
+
+func (ph *IPhone) launchKeypad() {
+	fmt.Println("[launch] opening intent of keypad ")
 }
 
 //
