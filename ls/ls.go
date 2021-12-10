@@ -31,11 +31,15 @@ func (ph *IPhone) call() {
 	fmt.Printf(">>> call using phone[%s] ... \n", ph.name)
 	ph.boot()
 	ph.launchKeypad()
-	//ph.healthCheck()
+	ph.dialing()
 }
 
 func (ph *IPhone) launchKeypad() {
 	fmt.Println("[launch] opening intent of keypad ")
+}
+
+func (ph *IPhone) dialing() {
+	fmt.Println("[dial] connect to receiver  ")
 }
 
 //
