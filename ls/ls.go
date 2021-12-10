@@ -42,23 +42,6 @@ func (ph *IPhone) dialing() {
 	fmt.Println("[dial] connect to receiver  ")
 }
 
-//
-//func (dr *DroneX) checkBattery() {
-//	fmt.Println("[preparing] checking battery's status ... ")
-//}
-//
-//func (dr *DroneX) checkPropeller() {
-//	fmt.Println("[preparing] checking propellers' status ... ")
-//}
-//
-//func (dr *DroneX) takeOff() {
-//	fmt.Println("[taking off] taking off now ... ")
-//}
-//
-//func (dr *DroneX) healthCheck() {
-//	fmt.Println("[flying] on the air, everything is ok, auto balancing enabled ... ")
-//}
-//
 //// extend DroneX
 //type DroneY struct {
 //	DroneX
