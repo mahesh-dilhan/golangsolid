@@ -62,25 +62,8 @@ func (dr *IPhone13Pro) videoCall() {
 }
 
 //
-//// extend DroneX
-//type DroneZ struct {
-//	DroneX
-//}
-//
-//func (dr *DroneZ) fly() {
-//	fmt.Printf(">>> flying drone[%s] ... \n", dr.name)
-//	dr.prepare()
-//	dr.takeOff()
-//	dr.healthCheck()
-//	dr.pirouettingCW()
-//}
-//
-//func (dr *DroneZ) pirouettingCW() {
-//	fmt.Println("[flying] I am pirouetting clockwise ... ")
-//}
-//
 func Phones() []Phone {
-	return []Phone{&IPhone{}}
+	return []Phone{&IPhone{name: "Iphone13"}, &IPhone13Pro{IPhone{name: "Iphone13Pro"}}}
 }
 
 func main() {
