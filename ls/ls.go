@@ -19,7 +19,7 @@ func (ph *IPhone) boot() {
 }
 
 func (ph *IPhone) doPOST() {
-	fmt.Println("[boot..] do power on self test")
+	fmt.Println("[boot] do power on self test")
 }
 
 func (ph *IPhone) checkIO() {
@@ -43,21 +43,24 @@ func (ph *IPhone) dialing() {
 }
 
 //// extend DroneX
-//type DroneY struct {
-//	DroneX
-//}
+type IPhone13Pro struct {
+	IPhone
+}
+
 //
-//func (dr *DroneY) fly() {
-//	fmt.Printf(">>> flying drone[%s] ... \n", dr.name)
-//	dr.prepare()
-//	dr.takeOff()
-//	dr.healthCheck()
-//	dr.spinAround()
-//}
+func (ph *IPhone13Pro) fly() {
+	fmt.Printf(">>> call phone[%s] ... \n", ph.name)
+	ph.boot()
+	ph.launchKeypad()
+	ph.dialing()
+	ph.videoCall()
+}
+
 //
-//func (dr *DroneY) spinAround() {
-//	fmt.Println("[flying] I am spinning around ... ")
-//}
+func (dr *IPhone13Pro) videoCall() {
+	fmt.Println("[call] video call")
+}
+
 //
 //// extend DroneX
 //type DroneZ struct {
@@ -76,12 +79,12 @@ func (ph *IPhone) dialing() {
 //	fmt.Println("[flying] I am pirouetting clockwise ... ")
 //}
 //
-//func getDrones() []Drone {
-//	return []Drone {&DroneY{}, &DroneZ{}, &DroneX{}}
-//}
-//
-//func main() {
-//	for _, dr := range getDrones() {
-//		dr.fly()
-//	}
-//}
+func Phones() []Phone {
+	return []Phone{&IPhone{}}
+}
+
+func main() {
+	for _, ph := range Phones() {
+		ph.call()
+	}
+}
