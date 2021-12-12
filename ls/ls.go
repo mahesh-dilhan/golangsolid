@@ -48,7 +48,7 @@ type IPhone13Pro struct {
 }
 
 //
-func (ph *IPhone13Pro) fly() {
+func (ph *IPhone13Pro) call() {
 	fmt.Printf(">>> call phone[%s] ... \n", ph.name)
 	ph.boot()
 	ph.launchKeypad()
@@ -61,9 +61,27 @@ func (dr *IPhone13Pro) videoCall() {
 	fmt.Println("[call] video call")
 }
 
+type IPhone13ProMax struct {
+	IPhone13Pro
+}
+
+func (ph *IPhone13ProMax) engageIntercom() {
+	fmt.Println("[intercomm] broadcast message via intercomm")
+}
+
+//
+func (ph *IPhone13ProMax) call() {
+	fmt.Printf(">>> call phone[%s] ... \n", ph.name)
+	ph.boot()
+	ph.launchKeypad()
+	ph.dialing()
+	ph.videoCall()
+	ph.engageIntercom()
+}
+
 //
 func Phones() []Phone {
-	return []Phone{&IPhone{name: "Iphone13"}, &IPhone13Pro{IPhone{name: "Iphone13Pro"}}}
+	return []Phone{&IPhone{name: "Iphone13"}, &IPhone13Pro{IPhone{name: "Iphone13Pro"}}, &IPhone13ProMax{IPhone13Pro{IPhone{name: "Promax13"}}}}
 }
 
 func main() {
