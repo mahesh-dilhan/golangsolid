@@ -13,3 +13,7 @@ type IPhone struct {
 	name string
 	s    *Storage
 }
+
+func NewIphone(name string, s *Storage) *Phone {
+
+}
