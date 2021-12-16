@@ -14,6 +14,6 @@ type IPhone struct {
 	s    *Storage
 }
 
-func NewIphone(name string, s *Storage) *Phone {
-
+func NewIphone(name string, s *Storage) *IPhone {
+	p := IPhone{name: "iPhone13", s: s}
 }
