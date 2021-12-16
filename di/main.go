@@ -15,5 +15,5 @@ type IPhone struct {
 }
 
 func NewIphone(name string, s *Storage) *IPhone {
-	p := IPhone{name: "iPhone13", s: s}
+	p := IPhone{name: "iPhone13", s: s, Phone: nil}
 }
