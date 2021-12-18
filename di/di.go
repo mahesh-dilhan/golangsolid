@@ -23,3 +23,11 @@ func (ph *IPhone) boot() {
 	ph.doPOST()
 	ph.checkIO()
 }
+
+func (ph *IPhone) doPOST() {
+
+}
+
+func (ph *IPhone) checkIO() {
+
+}
