@@ -17,7 +17,7 @@ type IPhone struct {
 }
 
 func NewIphone(name string, s *Storage) *IPhone {
-	p := IPhone{name: "iPhone13", s: s, Phone: nil}
+	p := IPhone{name: name, s: s, Phone: nil}
 	return &p
 }
 
@@ -46,4 +46,13 @@ func (ph *IPhone) launchKeypad() {
 
 func (ph *IPhone) dialing() {
 	fmt.Println("[dial] connect to receiver  ")
+}
+
+func main() {
+	s1 := &Storage{sku: "1TB"}
+	ip1 := NewIphone("iPhone13", s1)
+	ip1.call()
+	c2 := &Controller{cType: "NBCFB W-93S"}
+	dr2 := NewDroneX("Hummingbird#2", c2)
+	dr2.fly()
 }
