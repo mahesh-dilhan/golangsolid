@@ -52,7 +52,7 @@ func main() {
 	s1 := &Storage{sku: "256GB"}
 	ip1 := NewIphone("iPhone13", s1)
 	ip1.call()
-	s2 := &Storage{sku: "256GB"}
+	s2 := &Storage{sku: "1TB"}
 	ip2 := NewIphone("iPhone13 Pro Max", s2)
 	ip2.call()
 }
