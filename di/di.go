@@ -49,10 +49,10 @@ func (ph *IPhone) dialing() {
 }
 
 func main() {
-	s1 := &Storage{sku: "1TB"}
+	s1 := &Storage{sku: "256GB"}
 	ip1 := NewIphone("iPhone13", s1)
 	ip1.call()
-	c2 := &Controller{cType: "NBCFB W-93S"}
-	dr2 := NewDroneX("Hummingbird#2", c2)
-	dr2.fly()
+	s2 := &Storage{sku: "256GB"}
+	ip2 := NewIphone("iPhone13 Pro Max", s2)
+	ip2.call()
 }
