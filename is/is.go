@@ -8,3 +8,7 @@ type IPhone struct {
 	Phone
 	name string
 }
+
+type Lineup interface {
+	addSeries()
+}
