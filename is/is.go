@@ -12,3 +12,8 @@ type IPhone struct {
 type Lineup interface {
 	addSeries()
 }
+
+func (ph *IPhone) boot() {
+	ph.doPOST()
+	ph.checkIO()
+}
