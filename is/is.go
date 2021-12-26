@@ -52,6 +52,6 @@ func main() {
 	p2.addSeries(&p1)
 }
 
-func (p *IPhone) addSeries(l *Phone) {
+func (ph *IPhone) addSeries(l *Phone) {
 	fmt.Printf("[lineup] setting up lineup, adding %v to series... \n", l)
 }
