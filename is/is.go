@@ -27,3 +27,10 @@ func (ph *IPhone) doPOST() {
 func (ph *IPhone) checkIO() {
 	fmt.Println("[boot] check Input and output")
 }
+
+func (ph *IPhone) call() {
+	fmt.Printf(">>> call using phone[%s] ... \n", ph.name)
+	ph.boot()
+	ph.launchKeypad()
+	ph.dialing()
+}
