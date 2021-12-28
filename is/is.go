@@ -34,3 +34,11 @@ func (ph *IPhone) call() {
 	ph.launchKeypad()
 	ph.dialing()
 }
+
+func (ph *IPhone) launchKeypad() {
+	fmt.Println("[launch] opening intent of keypad ")
+}
+
+func (ph *IPhone) dialing() {
+	fmt.Println("[dial] connect to receiver  ")
+}
