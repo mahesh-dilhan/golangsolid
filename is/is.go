@@ -42,3 +42,7 @@ func (ph *IPhone) launchKeypad() {
 func (ph *IPhone) dialing() {
 	fmt.Println("[dial] connect to receiver  ")
 }
+
+func main() {
+
+}
