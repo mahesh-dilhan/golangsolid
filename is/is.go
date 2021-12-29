@@ -46,3 +46,7 @@ func (ph *IPhone) dialing() {
 func main() {
 
 }
+
+func (p *IPhone) addSeries(l *IPhone) {
+
+}
