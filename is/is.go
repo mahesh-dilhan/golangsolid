@@ -44,7 +44,11 @@ func (ph *IPhone) dialing() {
 }
 
 func main() {
-
+	var p1 Phone = &IPhone{name: "iPhone13"}
+	p1.call()
+	var p2 = &IPhone{name: "iPhone13 ProMax"}
+	dr2.fly()
+	dr2.add(&dr1)
 }
 
 func (p *IPhone) addSeries(l *Phone) {
